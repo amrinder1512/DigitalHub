@@ -48,3 +48,8 @@ export async function POST (request:NextRequest) {
     }
     
 }
+export async function GET(response:NextResponse) {
+    const user = await User.find();
+    return NextResponse.json(user)
+    
+}
