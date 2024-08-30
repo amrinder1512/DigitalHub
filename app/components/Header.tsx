@@ -1,27 +1,43 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaWhatsappSquare } from "react-icons/fa";
-import { PiSnapchatLogoBold } from "react-icons/pi";
-import { FaSnapchat } from "react-icons/fa";
+import { FaInstagramSquare, FaWhatsappSquare, FaSnapchat } from "react-icons/fa";
 
 const Header = () => {
   return (
     <>
-      <div className='flex  bg-white text-black font-bold  text-justify justify-between sticky top-0 mx-48 '>
-        <div className=' flex  space-x-16 my-0.5'>
-          <h1 className=''>+91- 9464397968</h1>
-          <h1>  as413620@gmail.com</h1>
-        </div>
-        <div className='flex space-x-4 mr-12 '>
-          <Link href="https://www.instagram.com/" className='hover:opacity-50 cursor-pointer flex text-nowrap'><FaInstagramSquare className='text-2xl rounded-full' />Instagram</Link>
-          <Link href="https://web.whatsapp.com/" className='hover:opacity-50 cursor-pointer flex text-nowrap'><FaWhatsappSquare  className='text-2xl rounded-full' /> Whatsapp</Link>
-          <Link href="https://web.snapchat.com/" className='hover:opacity-50 cursor-pointer flex text-nowrap'><FaSnapchat className='text-2xl' />Snapchat</Link>
+      <div className='bg-white text-black font-bold sticky top-0 w-full p-4 shadow-md'>
+        <div className='flex flex-col md:flex-row justify-between items-center mx-auto max-w-6xl'>
+          {/* Contact Info */}
+          <div className='flex space-x-8 mb-4 md:mb-0'>
+            <h1 className='text-sm md:text-base'>+91-9464397968</h1>
+            <h1 className='text-sm md:text-base'>as413620@gmail.com</h1>
+          </div>
 
+          {/* Social Media Links */}
+          <div className='flex space-x-4'>
+            <Link href="https://www.instagram.com/"
+              className='flex items-center space-x-1 hover:opacity-70'>
+                <FaInstagramSquare className='text-2xl' />
+                <span className='hidden md:block'>Instagram</span>
+              
+            </Link>
+            <Link href="https://web.whatsapp.com/"
+              className='flex items-center space-x-1 hover:opacity-70'>
+                <FaWhatsappSquare className='text-2xl' />
+                <span className='hidden md:block'>Whatsapp</span>
+              
+            </Link>
+            <Link href="https://web.snapchat.com/"
+              className='flex items-center space-x-1 hover:opacity-70'>
+                <FaSnapchat className='text-2xl' />
+                <span className='hidden md:block'>Snapchat</span>
+            
+            </Link>
+          </div>
         </div>
       </div>
     </>
   )
 }
 
-export default Header
+export default Header;

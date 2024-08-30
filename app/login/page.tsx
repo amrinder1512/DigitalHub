@@ -48,7 +48,7 @@ const page = () => {
     <div className ="bg-gray-600 min-w-5xl mx-96 rounded-md text-center p-4 text-black">
       
       <label htmlFor="email/username"  className='m-2 p-4 text-xl block'> Email / Username</label>
-      <input type="text" value={user.email} onChange={(e)=>setUser({...user, email:e.target.value})} placeholder='email' className='border-b-2 m-2 p-1 rounded-xl w-96 ' />
+      <input type="text" value={user.email} onChange={(e)=>setUser({...user, email:e.target.value})} placeholder='email' className='border-b-2 p-1 rounded-xl w-96 ' />
       <label htmlFor="password"  className='m-2 text-xl p-4 block'>Password</label>
       <input type="password" id='password'    value={user.password} onChange={(e)=>setUser({...user, password:e.target.value})} placeholder='*********' className='border-b-2 m-2 p-1 rounded-xl w-96 ' /> <br />
       <button onClick={onSubmit} className='border-black p-2 bg-slate-700 m-3 text-white rounded-xl hover:opacity-50'>Login</button>

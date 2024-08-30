@@ -1,48 +1,46 @@
 import React from 'react'
 import Link from 'next/link'
 import { FaCartShopping } from "react-icons/fa6";
-import { CgProfile } from "react-icons/cg";
 import { FaUserCircle } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import { IoSearchCircleSharp } from "react-icons/io5";
 
-
 const NavBar = () => {
   return (
     <>
-     <div className=" bg-slate-600 w-full text-white flex justify-between ">
-    <div className="flex  p-2   mx-48 space-x-4">
-    <div className=" ">
-      <h1 className="text-3xl ">Digital Hub</h1>
-    </div>
-    <div className="flex"> 
-      <input type="search" name="" id=""  className="border rounded-md p-1 w-96  focus:ring-green-500 focus:ring-1  text-black" placeholder="Search Products, items"/>
-      <IoSearchCircleSharp  className="text-4xl p-1 text-gray-400 relative "/>   
-    </div>
-    
-    
-    </div>
-    
-    <div className='p-2 text-xl flex  space-x-8 mr-10  uppercase mx-48 '>
-     <Link href='/login'> <h1 className='"bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 flex text-nowrap ">
-  Hover me'><IoHome className='text-2xl ' /> </h1>   </Link>
-     {/* <Link href="/signup">About </Link> */}
-     {/* <Link href="/signup">Gallery </Link> */}
-     {/* <Link href="/signup">  */}
-      {/* <select name="" id="">
-      <option value=""> Mobile</option>
-      <option value=""> Mobile</option>
-      <option value=""> Mobile</option>
-      <option value=""> Mobile</option>
-      </select> */}
-      {/* </Link> */}
-     <Link href="/signup" ><FaCartShopping className='text-2xl ' /></Link>
-     {/* <Link href="/signup">My Orders </Link> */}
-     <Link href="/signup"><FaUserCircle  className='text-2xl' /></Link>
-    </div>
-    </div>
+      <div className="bg-slate-600 w-full text-white flex flex-col md:flex-row justify-between p-4 items-center">
+        <div className="flex items-center space-x-4 mb-4 md:mb-0">
+          <h1 className="text-2xl md:text-3xl">Digital Hub</h1>
+          <div className="flex items-center">
+            <input 
+              type="search" 
+              className="border rounded-md p-2 w-64 md:w-96 focus:ring-green-500 focus:ring-1 text-black" 
+              placeholder="Search Products, items"
+            />
+            <IoSearchCircleSharp className="text-4xl p-1 text-gray-400" />
+          </div>
+        </div>
+        
+        <div className='flex space-x-6 md:space-x-8 text-xl uppercase'>
+          <Link href='/login' className="flex items-center space-x-1 hover:text-teal-400">
+            
+              <IoHome className='text-2xl' />
+              <span className="hidden md:block">Home</span>
+            
+          </Link>
+          <Link href='/cart' className="flex items-center hover:text-teal-400">
+       
+              <FaCartShopping className='text-2xl' />
+            
+          </Link>
+          <Link href='/profile'  className="flex items-center hover:text-teal-400">
+              <FaUserCircle className='text-2xl' />
+            
+          </Link>
+        </div>
+      </div>
     </>
   )
 }
 
-export default NavBar
+export default NavBar;

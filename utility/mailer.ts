@@ -1,7 +1,8 @@
 import nodemailer, { Transporter } from "nodemailer";
-
+import User from "@/models/userModel";
 export const sendEmail = async ({ email, emailType, userId }: any) => {
   try {
+    
     const transporter: Transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: 465,
