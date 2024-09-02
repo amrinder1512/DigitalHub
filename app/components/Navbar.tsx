@@ -8,7 +8,7 @@ import { IoSearchCircleSharp } from "react-icons/io5";
 const NavBar = () => {
   return (
     <>
-      <div className="bg-slate-600 w-full text-white flex flex-col md:flex-row justify-between p-4 items-center">
+      <div className="bg-slate-600 w-full text-white flex flex-col md:flex-row justify-between p-2 items-center">
         <div className="flex items-center space-x-4 mb-4 md:mb-0">
           <h1 className="text-2xl md:text-3xl">Digital Hub</h1>
           <div className="flex items-center">
@@ -28,7 +28,7 @@ const NavBar = () => {
               <span className="hidden md:block">Home</span>
             
           </Link>
-          <Link href='/cart' className="flex items-center hover:text-teal-400">
+          <Link href='/signup' className="flex items-center hover:text-teal-400">
        
               <FaCartShopping className='text-2xl' />
             

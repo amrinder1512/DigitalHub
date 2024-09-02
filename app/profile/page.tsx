@@ -35,17 +35,25 @@ const Page = () => {
 
   return (
     <>
-      <div className='block text-black text-center mt-10 items-center justify-center'>
-        Hi.. user
-        <h1 className='p-3 bg-slate-400  m-3 rounded mx-96'>
-          {data === 'nothing' ? "Nothing" : <Link href={`/profile/${data}`}>View Profile</Link>} {data}
-        </h1>
-        <button onClick={logout} className='text-center text-white bg-blue-700 p-3 rounded-md m-2 absolute right-2'>
-          Logout
-        </button>
-      </div>
-      <div className='flex items-center justify-center'>
-        <button onClick={getUserDetails} className='text-center text-white bg-green-700 p-3 rounded-md m-4'>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-lg text-center">
+          <h1 className="text-2xl font-bold mb-4 text-gray-800">Hi, User!</h1>
+          <p className="text-lg mb-4">
+            {data === 'nothing' ? "Nothing" : <Link href={`/profile/${data}`} className="text-blue-600 underline">View Profile</Link>} 
+          </p>
+          <p className="text-gray-600">{data}</p>
+          <button 
+            onClick={logout} 
+            className="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          >
+            Logout
+          </button>
+        </div>
+
+        <button 
+          onClick={getUserDetails} 
+          className="mt-6 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+        >
           Get User Details
         </button>
       </div>

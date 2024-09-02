@@ -5,7 +5,7 @@ import { FaInstagramSquare, FaWhatsappSquare, FaSnapchat } from "react-icons/fa"
 const Header = () => {
   return (
     <>
-      <div className='bg-white text-black font-bold sticky top-0 w-full p-4 shadow-md'>
+      <div className='bg-white text-black font-bold sticky top-0 w-full p-2 shadow-md'>
         <div className='flex flex-col md:flex-row justify-between items-center mx-auto max-w-6xl'>
           {/* Contact Info */}
           <div className='flex space-x-8 mb-4 md:mb-0'>
